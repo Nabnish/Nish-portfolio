@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diet Consultancy</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #FFF5EE; /* soft beige */
+  color: #4B3B2A; /* dark brown text */
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #FFE5D9; /* light peach */
+}
+
+.hero img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #D2691E; /* deep peach heading */
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: #FF8C61; /* warm peach button */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #e76b50;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #D2691E;
+}
+
+/* ---------- SPECIALITIES WITH ICONS ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #FFF8F0; /* off-white card */
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+
+/* ---------- TESTIMONIAL CAROUSEL ---------- */
+.testimonials {
+  background: #FFE5D9; /* light peach */
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #D2691E;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  max-width: 420px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: slide 15s infinite;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial-card img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Dots */
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dots span {
+  height: 8px;
+  width: 8px;
+  background: #D2691E;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+  opacity: 0.4;
+}
+
+.carousel-dots span:nth-child(1) { animation: dot 15s infinite; }
+.carousel-dots span:nth-child(2) { animation: dot 15s infinite 5s; }
+.carousel-dots span:nth-child(3) { animation: dot 15s infinite 10s; }
+
+/* Animations */
+@keyframes slide {
+  0%,30% { transform: translateX(0); }
+  35%,65% { transform: translateX(-100%); }
+  70%,100% { transform: translateX(-200%); }
+}
+
+@keyframes dot {
+  0%,33% { opacity: 1; }
+  34%,100% { opacity: 0.4; }
+}
+
+/* ---------- BOOK CONSULTATION CARD ---------- */
+.book-consultation {
+  background: #FFF8F0;
+  border-radius: 20px;
+  padding: 50px 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-consultation:hover {
+  transform: translateY(-5px);
+}
+
+.book-consultation h2 {
+  color: #D2691E;
+  margin-bottom: 20px;
+}
+
+.book-consultation p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ---------- WHATSAPP ---------- */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section className="hero">
+  <!-- Logo -->
+  <img src="realistic-nutrition-logo.png" alt="Realistic Nutrition Logo">
+  <h1>Simple Nutrition. Sustainable Results.</h1>
+  <p>Personalized diet plans for weight loss, PCOD, diabetes & metabolic health — without crash dieting.</p>
+  <a href="https://wa.me/919042215853" className="cta">Start on WhatsApp</a>
+</section>
+
+<!-- SPECIALITIES -->
+<section className="section">
+  <h2>We Help You With</h2>
+  <div className="cards">
+    <div className="card">
+      <img src="weight-loss-icon.png" alt="Weight Loss">
+      <strong>Weight Loss</strong>
+      <p>Sustainable fat loss using realistic Indian meals, habit-based changes, and long-term consistency.</p>
+    </div>
+    <div className="card">
+      <img src="pcod-icon.png" alt="PCOD/PCOS">
+      <strong>PCOD / PCOS</strong>
+      <p>Hormone-supportive nutrition to reduce symptoms, manage cravings, and improve cycle regularity.</p>
+    </div>
+    <div className="card">
+      <img src="diabetes-icon.png" alt="Diabetes">
+      <strong>Diabetes</strong>
+      <p>Blood sugar-friendly Indian meals without extreme food restrictions or fear.</p>
+    </div>
+    <div className="card">
+      <img src="thyroid-icon.png" alt="Thyroid">
+      <strong>Thyroid</strong>
+      <p>Nutrition that supports metabolism, energy levels, and gradual weight balance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL CAROUSEL -->
+<section className="testimonials">
+  <h2>Real Client Results – Weight Loss</h2>
+
+  <div className="carousel">
+    <div className="carousel-track">
+      <div className="testimonial-card">
+        <img src="testimonial1.jpg" alt="Testimonial 1">
+      </div>
+      <div className="testimonial-card">
+        <img src="testimonial2.jpg" alt="Testimonial 2">
+      </div>
+      <div className="testimonial-card">
+        <img src="testimonial3.jpg" alt="Testimonial 3">
+      </div>
+    </div>
+
+    <div className="carousel-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section className="section about">
+  <h2>About Me</h2>
+  <p>I’m a nutrition professional and certified diabetic educator with a strong foundation in clinical and evidence-based nutrition, working closely with real-life Indian lifestyles. My approach focuses on understanding metabolism, routine, medical history, and food habits — not quick fixes or generic diet charts.</p>
+  <p>I work with individuals dealing with weight struggles, PCOD, diabetes, and thyroid concerns, helping them build sustainable eating patterns that actually fit their daily life. The goal is long-term health, consistency, and clarity — without fear of food or extreme restriction.</p>
+  <p>Learn more about my professional background on <a href="https://www.instagram.com/reel/DSc2SDtjSb1/?igsh=MTZqYWZrdzloOXZubw==" target="_blank">LinkedIn</a></p>
+</section>
+
+<!-- BOOK CONSULTATION -->
+<section className="book-consultation">
+  <h2>Book Your 1:1 Nutrition Consultation</h2>
+  <p>Not sure where to start? Schedule a personalized session to understand what your body actually needs.</p>
+  <p>✔ Detailed lifestyle & food analysis<br>✔ Metabolic & symptom discussion<br>✔ Clear next-step guidance<br><strong>Duration:</strong> 30 minutes (WhatsApp / Call)</p>
+  <a href="https://wa.me/919042215853?text=Hi%20I%20want%20to%20book%20a%201:1%20nutrition%20consultation" className="cta">Book Consultation</a>
+</section>
+
+<!-- LEAD MAGNET -->
+<section className="section contact">
+  <h2>Start Your 7-Day Healthy Journey</h2>
+  <p>Start with my <strong>7-Day Realistic Indian Meal Guide</strong> designed for busy lifestyles. No starvation • No fancy ingredients • Easy home food</p>
+  <a href="https://wa.me/919042215853?text=Hi%20I%20want%20the%20free%207-day%20meal%20guide" className="cta">Get Free Guide on WhatsApp</a>
+</section>
+
+<!-- WHATSAPP BUTTON -->
+<a className="whatsapp" href="https://wa.me/919042215853">WhatsApp</a>
+
+</body>
+</html>
