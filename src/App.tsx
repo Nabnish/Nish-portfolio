@@ -1,40 +1,44 @@
 
 
 import './App.css'
+import logo from './assets/Gemini_Generated_Image_xzxxkixzxxkixzxx-removebg-preview.png';
 
 function App() {
   
+  const WhatsApp = () => {
+    window.location.href = 'https://wa.me/919042215853';
+  }
 
   return (
     <>
-      <section className="hero">
+      <section className="bg-[#ffe5d9] border sm:text-xs lg:text-sm pb-20 ">
 
-        <img src="realistic-nutrition-logo.png" alt="Realistic Nutrition Logo"/>
-          <h1>Simple Nutrition. Sustainable Results.</h1>
-          <p>Personalized diet plans for weight loss, PCOD, diabetes & metabolic health — without crash dieting.</p>
-          <a href="https://wa.me/919042215853" className="cta">Start on WhatsApp</a>
+        <img src={logo} alt="Realistic Nutrition Logo" className="h-auto max-h-30 mx-auto mt-10 " />
+          <h1 className='text-3xl font-bold text-[#D2691E] text-balck mb-6 mt-10 '>Simple Nutrition. Sustainable Results.</h1>
+          <p className="text-black mb-10 text-lg " >Personalized diet plans for weight loss, PCOD, diabetes & metabolic health — without crash dieting.</p>
+          <button type="button" className="text-white bg-[#FF8C61] p-3 rounded-3xl hover:bg-[#ff7644] pr-6 pl-6 " onClick={WhatsApp}>Start on WhatsApp</button>
       </section>
 
 
-      <section className="section">
+      <section className="">
         <h2>We Help You With</h2>
-        <div className="cards">
-          <div className="card">
+        <div className="flex flex-row"> 
+          <div className="basis-64">
             <img src="weight-loss-icon.png" alt="Weight Loss"/>
               <strong>Weight Loss</strong>
               <p>Sustainable fat loss using realistic Indian meals, habit-based changes, and long-term consistency.</p>
           </div>
-          <div className="card">
+          <div className="basis-64">
             <img src="pcod-icon.png" alt="PCOD/PCOS"/>
               <strong>PCOD / PCOS</strong>
               <p>Hormone-supportive nutrition to reduce symptoms, manage cravings, and improve cycle regularity.</p>
           </div>
-          <div className="card">
+          <div className="basis-64">
             <img src="diabetes-icon.png" alt="Diabetes"/>
               <strong>Diabetes</strong>
               <p>Blood sugar-friendly Indian meals without extreme food restrictions or fear.</p>
           </div>
-          <div className="card">
+          <div className="basis-64">
             <img src="thyroid-icon.png" alt="Thyroid"/>
               <strong>Thyroid</strong>
               <p>Nutrition that supports metabolism, energy levels, and gradual weight balance.</p>
