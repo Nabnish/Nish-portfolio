@@ -1,51 +1,60 @@
+import TiltedCard from "./components/card";
 
 
 import './App.css'
 import logo from './assets/Gemini_Generated_Image_xzxxkixzxxkixzxx-removebg-preview.png';
 
 function App() {
-  
+
   const WhatsApp = () => {
     window.location.href = 'https://wa.me/919042215853';
   }
+
+  const Info=[
+    {
+      Title:"Weight-Loss",
+      Details:"Sustainable fat loss using realistic Indian meals, habit-based changes, and long-term consistency"
+    },
+    {
+      Title:"PCOD / PCOS",
+      Details:"Hormone-supportive nutrition to reduce symptoms, manage cravings, and improve cycle regularity."
+    },
+    {
+      Title:"Diabetes",
+      Details:"Blood sugar-friendly Indian meals without extreme food restrictions or fear."
+    },
+    {
+      Title:"Thyroid",
+      Details:"Nutrition that supports metabolism, energy levels, and gradual weight balance."
+    }
+];
+
+
+
 
   return (
     <>
       <section className="bg-[#ffe5d9] border sm:text-xs lg:text-sm pb-20 ">
 
         <img src={logo} alt="Realistic Nutrition Logo" className="h-auto max-h-30 mx-auto mt-10 " />
-          <h1 className='text-3xl font-bold text-[#D2691E] text-balck mb-6 mt-10 '>Simple Nutrition. Sustainable Results.</h1>
-          <p className="text-black mb-10 text-lg " >Personalized diet plans for weight loss, PCOD, diabetes & metabolic health — without crash dieting.</p>
-          <button type="button" className="text-white bg-[#FF8C61] p-3 rounded-3xl hover:bg-[#ff7644] pr-6 pl-6 " onClick={WhatsApp}>Start on WhatsApp</button>
+        <h1 className='text-3xl font-bold text-[#D2691E] text-balck mb-6 mt-10 '>Simple Nutrition. Sustainable Results.</h1>
+        <p className="text-black mb-10 text-lg " >Personalized diet plans for weight loss, PCOD, diabetes & metabolic health — without crash dieting.</p>
+        <button type="button" className="text-white bg-[#FF8C61] p-3 rounded-3xl hover:bg-[#ff7644] pr-6 pl-6 " onClick={WhatsApp}>Start on WhatsApp</button>
       </section>
 
 
-      <section className="">
-        <h2>We Help You With</h2>
-        <div className="flex flex-row"> 
-          <div className="basis-64">
-            <img src="weight-loss-icon.png" alt="Weight Loss"/>
-              <strong>Weight Loss</strong>
-              <p>Sustainable fat loss using realistic Indian meals, habit-based changes, and long-term consistency.</p>
-          </div>
-          <div className="basis-64">
-            <img src="pcod-icon.png" alt="PCOD/PCOS"/>
-              <strong>PCOD / PCOS</strong>
-              <p>Hormone-supportive nutrition to reduce symptoms, manage cravings, and improve cycle regularity.</p>
-          </div>
-          <div className="basis-64">
-            <img src="diabetes-icon.png" alt="Diabetes"/>
-              <strong>Diabetes</strong>
-              <p>Blood sugar-friendly Indian meals without extreme food restrictions or fear.</p>
-          </div>
-          <div className="basis-64">
-            <img src="thyroid-icon.png" alt="Thyroid"/>
-              <strong>Thyroid</strong>
-              <p>Nutrition that supports metabolism, energy levels, and gradual weight balance.</p>
-          </div>
+      <section className="py-16 px-6 bg-[#fff7f2]">
+        <h2 className="text-3xl text-[#D2691E] font-bold  ">We Help You With</h2>
+        <div className="flex flex-wrap gap-8 justify-center pt-15 ">
+          {Info.map((item, index) => (
+            <TiltedCard
+              key={index}
+              title={item.Title}
+              details={item.Details}
+            />
+          ))}
         </div>
       </section>
-
 
       <section className="testimonials">
         <h2>Real Client Results – Weight Loss</h2>
@@ -53,13 +62,13 @@ function App() {
         <div className="carousel">
           <div className="carousel-track">
             <div className="testimonial-card">
-              <img src="testimonial1.jpg" alt="Testimonial 1"/>
+              <img src="testimonial1.jpg" alt="Testimonial 1" />
             </div>
             <div className="testimonial-card">
-              <img src="testimonial2.jpg" alt="Testimonial 2"/>
+              <img src="testimonial2.jpg" alt="Testimonial 2" />
             </div>
             <div className="testimonial-card">
-              <img src="testimonial3.jpg" alt="Testimonial 3"/>
+              <img src="testimonial3.jpg" alt="Testimonial 3" />
             </div>
           </div>
 
