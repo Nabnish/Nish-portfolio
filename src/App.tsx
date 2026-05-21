@@ -10,7 +10,7 @@ function App() {
 
   const Info = [
     {
-      Title: "Weight-Loss",
+      Title: "Weight-Management",
       Details:
         "Sustainable fat loss using realistic Indian meals, habit-based changes, and long-term consistency",
     },
