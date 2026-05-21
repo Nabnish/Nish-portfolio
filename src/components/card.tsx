@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, type MouseEvent } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 
@@ -8,14 +8,20 @@ const springValues = {
   mass: 2,
 };
 
-export default function TiltedCard({ title, details }) {
+export default function TiltedCard({
+  title,
+  details,
+}: {
+  title: string;
+  details: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   const rotateX = useSpring(useMotionValue(0), springValues);
   const rotateY = useSpring(useMotionValue(0), springValues);
   const scale = useSpring(1, springValues);
 
-  function handleMouse(e) {
+  function handleMouse(e: MouseEvent<HTMLDivElement>) {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
