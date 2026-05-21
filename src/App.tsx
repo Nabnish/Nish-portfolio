@@ -12,22 +12,27 @@ function App() {
     {
       Title: "Weight-Management",
       Details:
-        "Sustainable fat loss using realistic Indian meals, habit-based changes, and long-term consistency",
+        "No crash diets. No guilt. Just real Indian food, the right portions, and a plan that actually fits your life.So the weight stays off for good.",
     },
     {
-      Title: "PCOD / PCOS",
+      Title: "PCOD(PCOS)",
       Details:
-        "Hormone-supportive nutrition to reduce symptoms, manage cravings, and improve cycle regularity.",
+        "Your hormones are not your enemy. We work with your body ,balancing insulin, reducing inflammation, and easing symptoms through food that feels familiar, not foreign.",
     },
     {
       Title: "Diabetes",
       Details:
-        "Blood sugar-friendly Indian meals without extreme food restrictions or fear.",
+        "Living with diabetes doesn't mean giving up your favourite foods. We help you eat smarter , keeping blood sugar steady, energy high, and your plate full of flavours.",
     },
     {
       Title: "Thyroid",
       Details:
-        "Nutrition that supports metabolism, energy levels, and gradual weight balance.",
+        "Tired, sluggish, and struggling with weight despite doing everything right? A thyroid-supportive meal plan can change that. Addressing the nutritional gaps that medication alone cannot fix.",
+    },
+    {
+      Title: "Fatty Liver",
+      Details:
+          "Fatty liver is reversible. We build a plan that reduces liver fat, improves your reports, and gets you back to feeling like yourself.",
     },
   ];
 
@@ -89,7 +94,7 @@ function App() {
         </h2>
 
         <p className="text-[#8b5e3c] mb-12">
-          Sustainable fat loss with realistic Indian nutrition
+          Sustainable deit with realistic Indian nutrition
         </p>
 
         <div className="overflow-hidden relative max-w-6xl mx-auto">
@@ -264,13 +269,8 @@ function App() {
         </div>
       </section>
 
-      {/* FLOATING WHATSAPP */}
-      <a
-        className="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-6 py-4 rounded-full shadow-2xl z-50 font-semibold transition hover:scale-110"
-        href="https://wa.me/919042215853"
-      >
-        WhatsApp
-      </a>
+    
+     
     </>
   );
 }
