@@ -1,28 +1,32 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import "./App.css";
 
 // ──────────────────────────────────────────────
 // Motion variants
+// Note: ease arrays use `as const` so TS infers the exact tuple type
+// Framer Motion expects, instead of widening to number[].
 // ──────────────────────────────────────────────
-const fadeUp = {
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: {
     transition: { staggerChildren: 0.12, delayChildren: 0.1 },
   },
 };
 
-const heroWord = {
+const heroWord: Variants = {
   hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
   show: {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.8, ease: EASE },
   },
 };
 
