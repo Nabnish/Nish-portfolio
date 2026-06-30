@@ -134,7 +134,7 @@ function App() {
       {/* HERO SECTION */}
       <section
         id="hero"
-        className="bg-[#0A0A0A] pt-40 pb-16 px-6 overflow-hidden relative"
+        className="bg-[#0A0A0A] pt-25 pb-16 px-6 overflow-hidden relative"
       >
         {/* ambient glow, signature element */}
         <div className="pointer-events-none absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#D9A05B]/10 blur-[120px]" />
@@ -218,7 +218,7 @@ function App() {
           <motion.div
             className="flex gap-8 whitespace-nowrap text-white/30 text-sm font-semibold tracking-[0.15em] uppercase"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
           >
             {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map(
               (item, i) => (
