@@ -1,4 +1,5 @@
 import { motion, type Variants } from "framer-motion";
+import logo from "./assets/Gemini_Generated_Image_xzxxkixzxxkixzxx-removebg-preview.png";
 import "./App.css";
 
 // ──────────────────────────────────────────────
@@ -95,13 +96,16 @@ function App() {
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, ease: EASE }}
         className="fixed top-0 w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-white/10"
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-black tracking-tight text-white">
-            Nishath<span className="text-[#D9A05B]">.</span>
-          </div>
+          <a href="#hero" className="flex items-center gap-2">
+            <img src={logo} alt="Nishath Fathima logo" className="h-9 w-9 object-contain" />
+            <span className="text-2xl font-black tracking-tight text-white">
+              Nishath<span className="text-[#D9A05B]">.</span>
+            </span>
+          </a>
           <div className="hidden md:flex gap-8 text-sm font-medium text-white/70">
             {["Home", "Services", "About Me", "Testimonials", "Contact"].map(
               (label, i) => (
@@ -142,6 +146,14 @@ function App() {
             variants={stagger}
             className="max-w-3xl"
           >
+            <motion.div variants={fadeUp} className="mb-8">
+              <img
+                src={logo}
+                alt="Nishath Fathima logo"
+                className="h-16 w-16 object-contain"
+              />
+            </motion.div>
+
             <motion.p
               variants={fadeUp}
               className="text-[#D9A05B] text-sm font-semibold tracking-[0.2em] uppercase mb-6"
@@ -151,10 +163,10 @@ function App() {
 
             <h1 className="text-6xl md:text-8xl font-black leading-[0.95] text-white mb-8 tracking-tight">
               <motion.span variants={heroWord} className="block">
-                Sustainable
+                Nutrigenomic
               </motion.span>
               <motion.span variants={heroWord} className="block">
-                Nutrition,
+                Counselor,
               </motion.span>
               <motion.span variants={heroWord} className="block text-[#D9A05B]">
                 Real Results.
@@ -227,7 +239,7 @@ function App() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: EASE }}
             className="mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
@@ -273,7 +285,7 @@ function App() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: EASE }}
             className="mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
@@ -328,7 +340,7 @@ function App() {
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, ease: EASE }}
             >
               <h2 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
                 About Me
@@ -410,7 +422,7 @@ function App() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: EASE }}
             className="text-5xl md:text-6xl font-black leading-tight mb-8 text-white tracking-tight"
           >
             Ready to Transform
@@ -422,7 +434,7 @@ function App() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
             className="text-xl text-white/50 mb-12 max-w-2xl mx-auto"
           >
             Book a 1:1 consultation to understand what your body actually
@@ -465,7 +477,7 @@ function App() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: EASE }}
             className="flex gap-4 justify-center flex-wrap"
           >
             <motion.button
@@ -492,7 +504,10 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className="font-bold text-lg mb-4">Navigation</h3>
+              <div className="flex items-center gap-2 mb-4">
+                <img src={logo} alt="Nishath Fathima logo" className="h-7 w-7 object-contain" />
+                <span className="font-bold text-lg">Nishath</span>
+              </div>
               <div className="space-y-2">
                 <a href="#hero" className="block text-white/40 hover:text-[#D9A05B] transition">Home</a>
                 <a href="#services" className="block text-white/40 hover:text-[#D9A05B] transition">Services</a>
@@ -505,6 +520,7 @@ function App() {
               <div className="space-y-2">
                 <a href="https://linkedin.com/in/nishath-fathima-pasha-a91467199" target="_blank" rel="noreferrer" className="block text-white/40 hover:text-[#D9A05B] transition">LinkedIn</a>
                 <a href="https://wa.me/919042215853" className="block text-white/40 hover:text-[#D9A05B] transition">WhatsApp</a>
+                <a href="https://www.instagram.com/nish_nutritionish/" target="_blank" rel="noreferrer" className="block text-white/40 hover:text-[#D9A05B] transition">Instagram</a>
               </div>
             </div>
             <div>
