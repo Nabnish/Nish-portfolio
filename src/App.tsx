@@ -161,7 +161,7 @@ function App() {
               Certified Diabetic Educator
             </motion.p>
 
-            <h1 className="text-6xl md:text-8xl font-black leading-[0.95] text-white mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-8xl font-black leading-[0.95] text-white mb-8 tracking-tight">
               <motion.span variants={heroWord} className="block">
                 Nutrigenomic
               </motion.span>
